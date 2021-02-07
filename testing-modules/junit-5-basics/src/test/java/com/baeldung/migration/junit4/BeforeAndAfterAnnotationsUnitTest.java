@@ -28,13 +28,13 @@ public class BeforeAndAfterAnnotationsUnitTest {
     }
 
     @After
-    public void finalize() {
-        LOG.info("finalize");
+    public void teardown() {
+        LOG.info("teardown");
         list.clear();
     }
 
     @Test
-    public void whenCheckingListSize_ThenSizeEqualsToInit() {
+    public void whenCheckingListSize_thenSizeEqualsToInit() {
         LOG.info("executing test");
         assertEquals(2, list.size());
 
@@ -42,7 +42,7 @@ public class BeforeAndAfterAnnotationsUnitTest {
     }
 
     @Test
-    public void whenCheckingListSizeAgain_ThenSizeEqualsToInit() {
+    public void whenCheckingListSizeAgain_thenSizeEqualsToInit() {
         LOG.info("executing another test");
         assertEquals(2, list.size());
 
